@@ -1,3 +1,231 @@
+@font-face {
+    font-family: try-clother;
+    src: url(/CV/CV/icons/try-clother-bold.ttf);
+}
+
+html {
+    background-color:rgb(238, 247, 255);
+}
+
+h2, h3, h4, p {
+    margin: 0;
+}
+
 body {
-    background-color: bisque;
+    font-family: 'try-clother';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 900px;
+    height: 1700px;
+    margin: 20px auto 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.8);
+    background: linear-gradient(180deg, rgb(25, 200, 125) 0%, rgb(25, 200, 125) 20%, rgb(240, 240, 240) 20%, rgb(240, 240, 240) 100%);
+}
+
+header {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 0 0;
+}
+
+.header-name {
+    color: white;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.profession {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.links {
+    max-width: 150px;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+main {
+    width: 80%;
+    padding: 60px 0 0 0;
+}
+
+.about-me {
+    height: 260px;
+    display: flex;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+}
+
+.about-me-text {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+}
+
+.hello-words {
+    position: relative;
+    width: 110px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: -3px 3px 3px 0 rgba(0,0,0,0.3);
+    background-color: rgb(25, 200, 125);
+    font-size: 14px;
+    color: white;
+}
+
+.hello-words::after {
+    border: medium solid transparent;
+    content: "";
+    top: 100%;
+    left: 80%;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-color: rgb(25, 200, 125) rgba(255, 212, 52, 0) rgba(255, 212, 52, 0);
+    border-width: 10px;
+    margin-left: -10px;
+}
+
+.about-me-name {
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+.green {
+    color: rgb(25, 200, 125);
+}
+
+.about-me-profession {
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.about-me-info {
+    display: flex;
+    padding: 5px 0;
+}
+
+.info-items, .info-answers {
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 21px;
+}
+
+.info-answers {
+    font-size: 15px;
+    padding-left: 10%;
+}
+
+.info-links {
+    text-decoration: none;
+}
+
+.heading {
+    margin: 40px 0 20px 0;
+    text-align: center;
+    font-size: 28px;
+    color: rgb(25, 200, 125);
+}
+
+.skills-wrapper {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+}
+
+.skills-text {
+    text-align: justify;
+    font-size: 15px;
+    color: rgb(61, 61, 61);
+}
+
+.advant-list {
+    padding-left: 2rem;
+    list-style-type: none;
+}
+
+.advant-list li {
+    padding-left: 2rem;
+    background-image: url(/CV/CV/icons/icons8-стрелка-вправо-16.png);
+    background-position: 0 7px;
+    background-size: 20px 15px;
+    background-repeat: no-repeat;
+}
+
+.subheading {
+    margin: 20px 0 10px 0;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(25, 200, 125);
+}
+
+.hard-soft-skills {
+    display: flex;
+}
+
+.hard-skills {
+    width: 50%;
+}
+
+.soft-skills {
+    width: 50%;
+}
+
+.education-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.education-item {
+    width: 180px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+}
+
+.education-date {
+    width: 120px ;
+    position: relative;
+    left: -40px;
+    padding: 10px;
+    background-color: rgb(25, 200, 125);
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+.education-date::after {
+    border: medium solid transparent;
+    content: "";
+    top: 100%;
+    left: 0;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-color: rgb(20, 148, 92) rgba(255, 212, 52, 0) rgba(255, 212, 52, 0);
+    border-width: 10px 0 0 20px;
+    margin-left: 0px;
 }
