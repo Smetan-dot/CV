@@ -18,7 +18,7 @@ body {
     align-items: center;
     width: 80%;
     max-width: 900px;
-    height: 1700px;
+    height: 100%;
     margin: 20px auto 40px auto;
     border-radius: 15px;
     box-shadow: 0 15px 30px 0 rgba(0,0,0,0.8);
@@ -38,12 +38,10 @@ header {
 
 .name {
     font-size: 30px;
-    font-weight: 900;
 }
 
 .profession {
     font-size: 20px;
-    font-weight: 700;
     text-align: center;
 }
 
@@ -58,6 +56,11 @@ header {
 .link {
     box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
     border-radius: 10px;
+    transition: 0.3s;
+}
+
+.link:hover {
+    box-shadow: -5px -5px 5px 0 rgba(0,0,0,0.3);
 }
 
 main {
@@ -66,7 +69,7 @@ main {
 }
 
 .about-me {
-    height: 260px;
+    height: 320px;
     display: flex;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
 }
@@ -103,7 +106,6 @@ main {
 
 .about-me-name {
     font-size: 24px;
-    font-weight: 900;
     margin-top: 10px;
 }
 
@@ -114,7 +116,7 @@ main {
 .about-me-profession {
     line-height: 36px;
     font-size: 16px;
-    font-weight: 600;
+    padding-bottom: 10px;
     border-bottom: 2px solid rgba(0,0,0,0.1);
 }
 
@@ -125,8 +127,7 @@ main {
 
 .info-items, .info-answers {
     font-size: 13px;
-    font-weight: 900;
-    line-height: 21px;
+    line-height: 27px;
 }
 
 .info-answers {
@@ -141,7 +142,7 @@ main {
 .heading {
     margin: 40px 0 20px 0;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
     color: rgb(25, 200, 125);
 }
 
@@ -171,7 +172,7 @@ main {
 }
 
 .subheading {
-    margin: 20px 0 10px 0;
+    margin: 20px 0 0 0;
     font-size: 20px;
     text-align: center;
     color: rgb(25, 200, 125);
@@ -182,11 +183,17 @@ main {
 }
 
 .hard-skills {
-    width: 50%;
+    width: 46%;
 }
 
 .soft-skills {
-    width: 50%;
+    width: 54%;
+}
+
+#soft-skills-chart {
+    position: relative;
+    bottom: 30px;
+    left: 2.8%;
 }
 
 .education-wrapper {
@@ -194,11 +201,12 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 20px;
+    margin-bottom: 60px;
 }
 
 .education-item {
     width: 180px;
-    height: 200px;
+    height: 220px;
     padding: 20px;
     border-radius: 10px;
     background-color: white;
@@ -228,4 +236,207 @@ main {
     border-color: rgb(20, 148, 92) rgba(255, 212, 52, 0) rgba(255, 212, 52, 0);
     border-width: 10px 0 0 20px;
     margin-left: 0px;
+}
+
+.education-profession, .education-place {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0 0 0;
+    font-size: 12px;
+}
+
+.education-icon {
+    width: 28px;
+}
+
+.education-text {
+    margin: 10px 0 0 0;
+    font-size: 11px;
+    text-align: justify;
+    color: rgb(61, 61, 61);
+}
+
+@media screen and (max-width: 993px) {
+    body {
+        background: linear-gradient(180deg, rgb(25, 200, 125) 0%, rgb(25, 200, 125) 17%, rgb(240, 240, 240) 17%, rgb(240, 240, 240) 100%);
+    }
+    #soft-skills-chart {
+        bottom: 2vw;
+    }
+}
+
+@media screen and (max-width: 888px) {
+    body {
+        background: linear-gradient(180deg, rgb(25, 200, 125) 0%, rgb(25, 200, 125) 15%, rgb(240, 240, 240) 15%, rgb(240, 240, 240) 100%);
+    }
+    .about-me {
+        height: 260px;
+    }
+
+    .about-me-text {
+        padding: 10px;
+    }
+
+    .hello-words {
+        width: 95px;
+        font-size: 12px;
+    }
+
+    .about-me-name {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .about-me-profession {
+        font-size: 14px;
+        line-height: 28px;
+        padding-bottom: 5px;
+    }
+
+    .about-me-info {
+        padding: 0;
+    }
+
+    .info-items {
+        font-size: 11px;
+        line-height: 24px;
+    }
+
+    .info-answers {
+        font-size: 13px;
+        line-height: 24px;
+    }
+    
+    #soft-skills-chart {
+        bottom: 2.2vw;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    body {
+        background: linear-gradient(180deg, rgb(25, 200, 125) 0%, rgb(25, 200, 125) 10%, rgb(240, 240, 240) 10%, rgb(240, 240, 240) 100%);
+    }
+
+    .hard-soft-skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hard-skills, .soft-skills {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    header {
+        padding: 20px 0 0 0;
+    }
+
+    .name {
+        font-size: 26px;
+    }
+
+    .profession {
+        font-size: 16px;
+    }
+
+    .link {
+        width: 38px;
+    }
+
+    .about-me {
+        background-color: white;
+    }
+
+    .about-me-image {
+        height: 100px;
+        z-index: 100;
+    }
+
+    .about-me-text {
+        position: relative;
+        left: -74px;
+    }
+
+    .hello-words, .about-me-name, .about-me-profession {
+        position: relative;
+        right: -74px;
+    }
+}
+
+@media screen and (max-width: 707px) {
+    body {
+        background: linear-gradient(180deg, rgb(25, 200, 125) 0%, rgb(25, 200, 125) 8%, rgb(240, 240, 240) 8%, rgb(240, 240, 240) 100%);
+    }
+
+    .skills-text {
+        font-size: 13px;
+    }
+
+    .advant-list {
+        font-size: 15px;
+        padding-left: 1rem;
+    }
+
+    .education-wrapper {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 519px) {
+    .name {
+        font-size: 22px;
+    }
+
+    .profession {
+        font-size: 14px;
+    }
+
+    .link {
+        width: 28px;
+    }
+
+    .heading {
+        font-size: 28px;
+        margin: 30px 0 15px 0;
+    }
+
+    .about-me-text {
+        padding: 5px;
+    }
+
+    .hello-words {
+        width: 80px;
+        font-size: 10px;
+    }
+
+    .about-me-name {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .about-me-profession {
+        font-size: 12px;
+        line-height: 30px;
+        padding-bottom: 7px;
+        border: 0;
+    }
+
+    .about-me-info {
+        padding: 5px 0 0 0;
+        margin-top: 5px;
+        border-top: 2px solid rgba(0,0,0,0.1);
+    }
+
+    .info-items {
+        font-size: 10px;
+        line-height: 24px;
+    }
+
+    .info-answers {
+        font-size: 12px;
+        line-height: 24px;
+    }
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>CV</title>
 </head>
@@ -24,7 +25,7 @@
     </header>
     <main>
         <section class="about-me">
-            <img class="about-me-image" src="/CV/CV/icons/Photo.png" alt="photo">
+            <img class="about-me-image" src="/CV/CV/icons/Photo2.png" alt="photo">
             <div class="about-me-text">
                 <div class="hello-words">Hello & Welcome</div>
                 <h2 class="about-me-name">I'm <span class="green">Andrey Smiatana</span></h2>
@@ -32,12 +33,14 @@
                 <div class="about-me-info">
                     <div class="info-items">
                         Age:<br>
+                        Nationaloty:<br>
                         Adress:<br>
                         Email:<br>
                         Phone:<br>
                         Telegram:</div>
                     <div class="info-answers">
                         33<br>
+                        Belarusian<br>
                         Belarus, Minsk<br>
                         <a class="info-links" href="mailto:smetanaandrei@gmail.com">smetanaandrei@gmail.com</a><br>
                         <a class="info-links" href="tel:+375444735734">+375 (44) 473-57-34</a><br>
@@ -48,22 +51,25 @@
         <section class="skills">
             <h2 class="heading">Skills</h2>
             <div class="skills-wrapper">
-                <p class="skills-text">В каждом резюме в графе "о себе" вы найдете слова "я надежный и ответственный”. Что же делать тем, кто на самом деле обладает этими качествами?)) Вот например, я - именно такой. Надежный как Нокиа 1100 (но все же не настолько ограниченный):<br>
+                <p class="skills-text">In every CV you can find a text “I am reliable and responsible person”. But Have you ever thought how to find someone who actually does have these qualities?)) For example, I have this kind of personality: reliable like a Nokia 1100 (but I have wore options in fact):<br>
                     <ul class="advant-list">
-                        <li>работаю, когда заряд батареи уже неделю показывает около нуля;</li>
-                        <li>эффективно коммуницирую и пытаюсь вытащить проект, даже если товарищи по команде не отличаются ответственностью;</li>
-                        <li>делаю то, что взял на себя. Всегда;</li>
-                        <li>устойчив к когнитивной фрустрации и не забиваю, если сложно (немного только побьюсь головой о стену и опять работать);</li>
-                        <li>в эмоции не включаюсь (пытаюсь вместо этого решить задачу). Правда жена говорит, что это недостаток, а не достоинство.</li>
+                        <li>I work when the battery charge has been around zero for a week;</li>
+                        <li>I communicate effectively and try to get the project done, even if my teammates are out of the picture;</li>
+                        <li>I respect commitments and do my part of job. Always.</li>
+                        <li>I can tolerate much cognitive frustration and don’t give up if it’s difficult (I just  bang my head up against the wall a little and then work again);</li>
+                        <li>I don’t get emotional (I try to keep calm and solve the problems instead). Though, my wife says that this is a disadvantage, not a benefit.</li>
                     </ul>
-                    <p class="skills-text">Одним словом, если я работаю в команде, то я и есть тот человек, на которого можно полагаться, и про которого все знают, что уж он то не подведет. Более того, учитывая, что я свежеиспеченный джун, - надежность, ответственность и простота в коммуникации остаются моим главными конкурентными преимуществами) но вам придется проверить это на практике, потому что написать так каждый может.</p>
+                    <p class="skills-text">Long story short, when you have me in your team, then  I am the person you can rely on, and the “he will not let you down” kind of person. Moreover, considering that I am a freshly minted junior, reliability, responsibility and ease of communication remain my main competitive advantages), but you will have to check this in practice. So let’s try)
+                    </p>
                 </p>
                 <div class="hard-soft-skills">
                     <div class="hard-skills">
                         <h3 class="subheading">Hard Skills</h3>
+                        <canvas id="hard-skills-chart"></canvas>
                     </div>
                     <div class="soft-skills">
                         <h3 class="subheading">Soft Skills</h3>
+                        <canvas id="soft-skills-chart"></canvas>
                     </div>
                 </div>
             </div>
@@ -73,42 +79,79 @@
             <div class="education-wrapper">
                 <div class="education-item">
                     <div class="education-date">2008 - 2013</div>
-                    <div class="education-profession"></div>
-                    <div class="education-place"></div>
-                    <div class="education-text"></div>
+                    <div class="education-profession">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-диплом-48.png" alt="diplom">
+                        <span>Economics and enterprise management</span>
+                    </div>
+                    <div class="education-place">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-университет-48.png" alt="place">
+                        <span>Belarusian State Economic University</span>
+                    </div>
+                    <div class="education-text">I has completed the bachalor degree from this prestigios university. During my studies I gained communication and management skills.</div>
                 </div>
                 <div class="education-item">
                     <div class="education-date">2013 - 2020</div>
-                    <div class="education-profession"></div>
-                    <div class="education-place"></div>
-                    <div class="education-text"></div>
+                    <div class="education-profession">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-диплом-48.png" alt="diplom">
+                        <span>Hard Jobing</span>
+                    </div>
+                    <div class="education-place">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-университет-48.png" alt="place">
+                        <span>Many Places</span>
+                    </div>
+                    <div class="education-text">Working as a builder, factory worker and a manager of workers I learned about myself that I'm good at working hard, procces organizing and crisis managment</div>
                 </div>
                 <div class="education-item">
                     <div class="education-date">2020 - 2023</div>
-                    <div class="education-profession"></div>
-                    <div class="education-place"></div>
-                    <div class="education-text"></div>
+                    <div class="education-profession">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-диплом-48.png" alt="diplom">
+                        <span>English B2 Upper Intermediate</span>
+                    </div>
+                    <div class="education-place">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-университет-48.png" alt="place">
+                        <span>Self-education</span>
+                    </div>
+                    <div class="education-text">I has successfully completed the EF SET Certificate and has earned the English level B2 Upper Intermediate.</div>
                 </div>
                 <div class="education-item">
                     <div class="education-date">2021</div>
-                    <div class="education-profession"></div>
-                    <div class="education-place"></div>
-                    <div class="education-text"></div>
+                    <div class="education-profession">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-диплом-48.png" alt="diplom">
+                        <span>Effective communication skills training</span>
+                    </div>
+                    <div class="education-place">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-университет-48.png" alt="place">
+                        <span>Communication Laboratory</span>
+                    </div>
+                    <div class="education-text">I completed the Effective communication skills training and improved communication skills, including in crisis cases.</div>
                 </div>
                 <div class="education-item">
                     <div class="education-date">2022 - 2023</div>
-                    <div class="education-profession"></div>
-                    <div class="education-place"></div>
-                    <div class="education-text"></div>
+                    <div class="education-profession">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-диплом-48.png" alt="diplom">
+                        <span>FrontEnd Developer</span>
+                    </div>
+                    <div class="education-place">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-университет-48.png" alt="place">
+                        <span>The Rolling Scopes School</span>
+                    </div>
+                    <div class="education-text">I has successfully complited The Rolling Scopes School JS/FE PRE-SCHOOL 2022Q4 (JAVASCRIPT). These are my first steps in web development.</div>
                 </div>
                 <div class="education-item">
                     <div class="education-date">2023 - . . .</div>
-                    <div class="education-profession"></div>
-                    <div class="education-place"></div>
-                    <div class="education-text"></div>
+                    <div class="education-profession">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-диплом-48.png" alt="diplom">
+                        <span>FrontEnd Developer</span>
+                    </div>
+                    <div class="education-place">
+                        <img class="education-icon" src="/CV/CV/icons/icons8-университет-48.png" alt="place">
+                        <span>The Rolling Scopes School</span>
+                    </div>
+                    <div class="education-text">I has successfully complited The Rolling Scopes School JAVASCRIPT/FRONT-END 2023Q1 (JAVASCRIPT)</div>
                 </div>
             </div>
         </section>
     </main>
+    <script src="/CV/CV/script.js"></script>
 </body>
 </html>
