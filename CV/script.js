@@ -66,3 +66,4 @@ function craeteChart(container, data) {
 
 craeteChart(hardSkillsChart, hardData);
 craeteChart(softSkillsChart, softData);
+changeLang();
